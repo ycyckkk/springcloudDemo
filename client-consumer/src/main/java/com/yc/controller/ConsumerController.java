@@ -7,6 +7,7 @@ import com.netflix.hystrix.HystrixCommand.Setter;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
 import com.yc.command.*;
+import com.yc.service.HelloService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,9 @@ public class ConsumerController {
 
     @Autowired
     private LoadBalancerClient loadBalancerClient;
+
+    @Autowired
+    private HelloService helloService;
 
     @Autowired
     Tracer tracer;
@@ -172,6 +176,11 @@ public class ConsumerController {
         for (int i = 0; i < 10; i++) {
             new TestAsyncSemaphore(i).start();
         }
+    }
+
+    @RequestMapping(value = "/helloService12", method = RequestMethod.GET)
+    public String helloService12() {
+        return helloService.hello("11");
     }
 
     private class TestThread extends Thread {

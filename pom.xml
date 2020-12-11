@@ -17,6 +17,8 @@
         <module>config-server</module>
         <module>gateway</module>
         <module>zuul-demo</module>
+        <module>simpleSpringBoot</module>
+        <module>common-api</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

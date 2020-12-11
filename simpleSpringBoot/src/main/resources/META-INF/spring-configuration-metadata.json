@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "interview",
+      "type": "com.yc.InterviewProperties",
+      "sourceType": "com.yc.InterviewProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "interview.address",
+      "type": "java.lang.String",
+      "sourceType": "com.yc.InterviewProperties"
+    },
+    {
+      "name": "interview.company",
+      "type": "java.lang.String",
+      "sourceType": "com.yc.InterviewProperties"
+    },
+    {
+      "name": "interview.salary",
+      "type": "java.lang.Integer",
+      "sourceType": "com.yc.InterviewProperties"
+    }
+  ],
+  "hints": []
+}

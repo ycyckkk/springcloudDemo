@@ -1,9 +1,7 @@
 package com.yc.controller;
 
-import brave.Tracer;
 import com.alibaba.fastjson.JSON;
 import com.ctrip.framework.apollo.Config;
-import com.ctrip.framework.apollo.ConfigService;
 import com.ctrip.framework.apollo.spring.annotation.ApolloConfig;
 import com.yc.entity.User;
 import com.yc.service.UserService;
@@ -13,14 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created by yuche on 2019/9/7.
  */
 @RestController
-
 public class UserController {
     @Autowired
     private UserService userService;

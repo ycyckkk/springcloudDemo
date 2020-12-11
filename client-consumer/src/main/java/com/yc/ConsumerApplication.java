@@ -8,15 +8,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
  * Hystrix作用：
  * 1）故障降级         使用场景：（防止故障蔓延）
- * 2）线程隔离
- *                     使用场景：（限流）
- *                     特性：（信号量隔离，线程池隔离）
+ * 2）线程隔离         使用场景：（限流） 特性：（信号量隔离，线程池隔离）
  * 3) 请求合并和请求结果缓存
  */
 /**
@@ -26,6 +25,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableCircuitBreaker
 @SpringBootApplication
 @EnableDiscoveryClient
+@EnableFeignClients
 public class ConsumerApplication {
 
     @Bean

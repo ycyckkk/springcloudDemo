@@ -5,15 +5,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
- * 应用模块名称<p>
- * 代码描述<p>
- * Copyright: Copyright (C) 2019 XXX, Inc. All rights reserved. <p>
- *
- * @author yuche
- * @since 2019/12/29 19:43
+ * API网关=请求路由+断言工厂（匹配具体的请求路径）+过滤工厂（对请求进行额外的处理）
+ * 进行：限流，重试，统一的异常处理
+ * 底层是基于netty
  */
 @SpringBootApplication
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
+@EnableInterview
 public class GateWayApplicationn {
     public static void main(String[] args) {
         SpringApplication.run(GateWayApplicationn.class, args);
