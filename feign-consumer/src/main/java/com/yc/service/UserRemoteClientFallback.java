@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @since 2019/12/29 19:11
  */
 @Component
-public class UserRemoteClientFallback implements HelloService {
+public class UserRemoteClientFallback {
     public String hello(String id) {
         return "failed";
     }

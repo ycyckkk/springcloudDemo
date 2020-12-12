@@ -19,6 +19,7 @@
         <module>zuul-demo</module>
         <module>simpleSpringBoot</module>
         <module>common-api</module>
+        <module>common-util</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
