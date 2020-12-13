@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
  * @Author yucheng
  * @Date 2020/12/11 13:52
  */
-@FeignClient(value = "hello-service")
+//@FeignClient(value = "hello-service")
 @Service
 public interface PaymentService{
 
@@ -21,5 +21,9 @@ public interface PaymentService{
     // TODO
 //    @ResponseBody
     public String getPayment(@PathVariable(value = "id") String id);
+
+
+    @PostMapping(value = "/initPayment")
+    public void initPayment();
 
 }

@@ -18,11 +18,18 @@ public class PaymentController {
 
     @GetMapping(value = "/queryPayment/{id}")
     public String queryPayment(@PathVariable(value = "id") String id) {
-        return JSON.toJSONString(paymentServiceImpl.getPayment(id));
+        return paymentServiceImpl.getPayment(id);
     }
 
     @PostMapping(value = "/updatePayment")
-    public void updatePayment(@RequestBody Payment payment) {
+    public String updatePayment(@RequestBody Payment payment) {
         paymentServiceImpl.updatePayment(payment);
+        return "1";
+    }
+
+    @GetMapping(value = "/initPayment/{id}")
+    public String initPayment(@PathVariable(value = "id") String id) {
+        paymentServiceImpl.initPayment();
+        return "1";
     }
 }

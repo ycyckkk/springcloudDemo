@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
  * @Date 2020/12/11 9:06
  */
 // fallback = UserRemoteClientFallback.class, configuration = FeignAutoConfiguration.class
-@FeignClient(value = "hello-service")
+//@FeignClient(value = "hello-service")
 @Service
 public interface HelloService {
     @RequestMapping(value = "/getUserById/{id}", method = RequestMethod.GET)

@@ -20,7 +20,7 @@ import java.math.BigDecimal;
 @SpringBootApplication
 @EnableFeignClients
 @MapperScan("com.yc.mapper")
-public class ProducerApplication implements CommandLineRunner {
+public class ProducerApplication {
 
     @Autowired
     private PaymentService paymentServiceImpl;
@@ -31,16 +31,16 @@ public class ProducerApplication implements CommandLineRunner {
         SpringApplication.run(ProducerApplication.class, args);
     }
 
-    public void run(String... args) throws Exception {
-        //幂等
-        //高并发场景
-        //乐观锁：（版本号，key值控制，业务id）
-        //悲观锁：（分布式锁，数据库行锁）
-
-        Payment payment = new Payment();
-        payment.setPaymentStatus(2);
-        payment.setPaymentAmount(new BigDecimal(8));
-        payment.setPaymentId("6db9404e-3b8b-11eb-8a1b-0242ac110002");
-       paymentServiceImpl.updatePayment(payment);
-    }
+//    public void run(String... args) throws Exception {
+//        //幂等
+//        //高并发场景
+//        //乐观锁：（版本号，key值控制，业务id）
+//        //悲观锁：（分布式锁，数据库行锁）
+//
+//        Payment payment = new Payment();
+//        payment.setPaymentStatus(2);
+//        payment.setPaymentAmount(new BigDecimal(8));
+//        payment.setPaymentId("6db9404e-3b8b-11eb-8a1b-0242ac110002");
+//       paymentServiceImpl.updatePayment(payment);
+//    }
 }
