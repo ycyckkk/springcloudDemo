@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
@@ -72,6 +73,9 @@ public class PaymentServiceImpl implements PaymentService {
         String result = JSON.toJSONString(paymentMapper.selectOne(wrapper));
         //放入缓存中
         map.putAsync(id, result);
+
+
+
         return result;
     }
 
