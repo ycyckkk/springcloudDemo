@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
  * @Author yucheng
  * @Date 2020/12/11 13:52
  */
-//@FeignClient(value = "hello-service")
+@FeignClient(value = "hello-service")
 @Service
 public interface PaymentService{
 

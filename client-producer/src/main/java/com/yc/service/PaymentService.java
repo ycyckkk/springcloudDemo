@@ -15,17 +15,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 @Service
 public interface PaymentService {
 
-    //    public void addPayment();
-    @PostMapping(value = "/updatePayment")
+
+//    public void addPayment();
+//    @PostMapping(value = "/updatePayment")
     public void updatePayment(@RequestBody Payment payment);
 
-    @GetMapping(value = "/queryPayment/{id}")
-    // TODO
+//    @GetMapping(value = "/queryPayment/{id}")
 //    @ResponseBody
     public String getPayment(@PathVariable(value = "id") String id);
 
 
-    @PostMapping(value = "/initPayment")
+//    @PostMapping(value = "/initPayment")
     public void initPayment();
 
 }

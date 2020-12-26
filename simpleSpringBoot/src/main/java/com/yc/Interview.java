@@ -7,5 +7,4 @@ package com.yc;
 public interface Interview {
 
     public boolean joinInterview(InterviewProperties properties);
-
 }

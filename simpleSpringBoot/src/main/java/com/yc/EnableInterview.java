@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Import;
 import java.lang.annotation.*;
 
 /**
+ * 定义Enable注解
  * @Author yucheng
  * @Date 2020/12/8 18:26
  */

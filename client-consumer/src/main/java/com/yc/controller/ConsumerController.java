@@ -88,9 +88,10 @@ public class ConsumerController {
         stringBuilder.append("第一次Value=");
         String name = "getCache";
 
-        String result = new CacheCommand(name).execute();
+        String result = new CacheCommand(name).execute(); //同步进行调用 update by 12-22
         stringBuilder.append(result);
-        result = new CacheCommand(name).queue().get();
+
+        result = new CacheCommand(name).queue().get();//异步进行调用
         stringBuilder.append(";第二次Value=");
         stringBuilder.append(result);
         return JSON.toJSONString(stringBuilder.toString());

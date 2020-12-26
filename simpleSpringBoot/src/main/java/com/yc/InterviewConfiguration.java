@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * 自动装配类
  * @Author yucheng
  * @Date 2020/12/8 17:51
  */
