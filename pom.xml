@@ -20,6 +20,8 @@
         <module>simpleSpringBoot</module>
         <module>common-api</module>
         <module>common-util</module>
+        <module>nacos-server</module>
+        <module>client-producer1-sentinel</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
