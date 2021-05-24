@@ -28,4 +28,6 @@ public interface PaymentService {
 //    @PostMapping(value = "/initPayment")
     public void initPayment();
 
+    public void lock();
+
 }

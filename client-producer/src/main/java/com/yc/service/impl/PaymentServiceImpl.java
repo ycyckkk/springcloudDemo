@@ -38,6 +38,10 @@ public class PaymentServiceImpl implements PaymentService {
     @Autowired
     TransactionDefinition transactionDefinition;
 
+    private Object object = new Object();
+
+    public static ThreadLocal<Integer> threadLocal = new ThreadLocal<Integer>();
+
 //    public void addPayment() {
 //    }
 
@@ -114,6 +118,24 @@ public class PaymentServiceImpl implements PaymentService {
             bloomFilter.tryInit(1000000L, 0.02);
             list.forEach(payment -> bloomFilter.add(payment.getPaymentId()));
         }
+    }
+
+    @Override
+    public void lock() {
+        RLock rLock = redissonClient.getLock("anyLock");
+        rLock.lock();
+        threadLocal.set(1);
+        threadLocal.remove();
+        try {
+            synchronized (object) {
+                System.out.println("12345");
+            }
+            boolean res = rLock.tryLock(100, 10, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
 

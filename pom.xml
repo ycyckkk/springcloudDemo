@@ -21,13 +21,16 @@
         <module>common-api</module>
         <module>common-util</module>
         <module>nacos-server</module>
-        <module>client-producer1-sentinel</module>
+        <module>kafka-demo</module>
+        <module>demo1</module>
+        <module>dubbo-api</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.boot.version>2.1.1.RELEASE</spring.boot.version>
         <spring.cloud.version>Greenwich.RELEASE</spring.cloud.version>
         <fastjson.version>1.2.58</fastjson.version>
+        <dubbo.version>2.7.8</dubbo.version>
 
     </properties>
 
@@ -61,6 +64,7 @@
 <!--            </dependency>-->
         </dependencies>
     </dependencyManagement>
+
     <build>
         <plugins>
             <plugin>
